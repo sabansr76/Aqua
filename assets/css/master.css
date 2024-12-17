@@ -6,22 +6,18 @@
 }
 
 * {
-    font-family: 'Karla';
-    margin: 0;
-}
-
-html, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', serif;
+}
+
+html, body, main {
     height: 100%;
     background-color: hsl(204, 43%, 93%);
 }
 
-.container-fluid{
-    height: 100%;
-}
-
-.container-fluid .row .main-card{
+.container .row .main-card{
     border-radius: 15px;
     box-shadow: 0px 0px 20px 5px hsla(0, 0%, 0%, 0.1);
 }
@@ -55,12 +51,8 @@ html, body {
     font-weight: 400;
 }
 
-.container-fluid .main-card-top .card-body{
+.container .main-card-top .card-body{
     color: hsl(218, 22%, 67%);
-}
-
-.container-fluid .row.blue-card{
-
 }
 
 .blue-card .card-title{
@@ -104,7 +96,6 @@ html, body {
     padding: 0;
 }
 
-
 .btn {
     background-color: var(--x--secondary);
     border: none;
@@ -114,17 +105,6 @@ html, body {
     box-shadow: 0 8px 16px 0 rgba(112, 112, 112, 0.123), 0 6px 20px 0 rgba(0, 0, 0, 0.091);
     text-align: center;
 }
-
-@media screen and (max-width: 768px){
-  /* .container-fluid{
-     margin-top: 50px;
-  } */
-
-    p, h1, h2, h3, h4, h5, h6 {
-        overflow-wrap: break-word;
-    }
-}
-
 
 .card {
     border-radius: 15px;
@@ -139,10 +119,15 @@ html, body {
     overflow: hidden;
 }
 
-@media (max-width: 768px) { 
-    .container-fluid {
-        height: max-content;
+@media screen and (max-width: 768px){
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+}
 
+@media (max-width: 768px) { 
+    .container {
+        height: max-content;
     }
 
     .blue-card{
